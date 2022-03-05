@@ -7,6 +7,7 @@ var App = {
   $spinner: $('.spinner img'),
 
   username: 'anonymous',
+  // name from messages.name
 
   initialize: function() {
     App.username = window.location.search.substr(10);
@@ -18,6 +19,7 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+    App.fetch(MessagesView.render());
 
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.
@@ -27,9 +29,12 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
+      console.log();
 
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
+
+      //update: put/patch
     });
   },
 

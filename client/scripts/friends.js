@@ -10,4 +10,7 @@ var Friends = {
   // TODO: Define methods which allow you to add, toggle,
   // and check the friendship status of other users.
 
+  // add: post
+  // toggle: updates || get:
+  // check: get
 };
