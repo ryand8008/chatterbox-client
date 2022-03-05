@@ -15,21 +15,23 @@ var MessagesView = {
   render: function(stuff) {
     // TODO: Render _all_ the messages.
     // console.log($('chats').get());
-    console.log('TESTING', stuff);
+    // console.log('TESTING', stuff);
     for (var x = 0; x < stuff.length; x++) {
-
-      MessagesView.$chats.append(stuff[x].text);
+      var message = MessageView.render(stuff[x]);
+      MessagesView.$chats.append(message);
     }
     // stuff.username
+    //$('body').empty();
 
 
   },
 
   renderMessage: function(message) {
     // TODO: Render a single message.
-    //message
-    $('#chats').append(message);
-    console.log(message);
+    console.log('TESTING', message[0]);
+    // MessagesView.$chats.empty();
+    var one = MessagesView.render(message[0]);
+    MessagesView.$chats.append(one);
   },
 
   handleClick: function(event) {

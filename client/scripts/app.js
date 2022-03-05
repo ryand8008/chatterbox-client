@@ -38,12 +38,13 @@ var App = {
       // Messages.addAllStuff(data);
       MessagesView.render(data);
       RoomsView.render();
+      MessagesView.renderMessage(data);
+      setInterval(MessagesView.renderMessage(data), 2000);
       //update rooms
       // console.log(data[0].username);
       // console.log(data);
-      console.log(Messages);
-      // var $div = $('<div></div>').text('Messages._data');
-      // $div.appendTo($('#chats'));
+      // console.log(Messages);
+
 
 
 

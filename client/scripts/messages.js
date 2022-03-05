@@ -13,13 +13,23 @@ var Messages = {
 
   _data: {},
 
-  addAllStuff: function(arr) {
+  add: function(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      Messages._data[arr[i].message_id] = arr[i];
+    }
+  },
 
-    // console.log(message, 'this is message');
-    // Messages._data[messageID] = message;
-
+  retrieveUser: function(data, user) {
+    let userStorage = {};
+    for (let key in data) {
+      if (data[key].username === user) {
+        userStorage[username] = data[key];
+      }
+    }
+    return userStorage;
 
   }
+
 };
 
 
