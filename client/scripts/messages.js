@@ -2,13 +2,28 @@
 // Treat it like a data structure - add methods to interact
 // with and manipulate the data.
 
+// TODO: Define how you want to store your messages.
+
+// TODO: Define methods which allow you to retrieve from,
+// add to, and generally interact with the messages.
+
 var Messages = {
+  //data is array of objects
+  //keys text, username, roomname
 
-  // TODO: Define how you want to store your messages.
-  _data: null,
+  // _data: {'username': 'something',
 
-  // TODO: Define methods which allow you to retrieve from,
-  // add to, and generally interact with the messages.
+  //         }
+
+  //get method? sortBy created at
+  //_.chain?? takes in an object
+
+  //update method?
+
+  //iterate over messages, grabbing info
+
+  //use escaping for XSS (sanitize?)
+
 
   //retrieve: get
   //add to: put/patch or post

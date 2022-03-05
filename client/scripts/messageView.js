@@ -13,6 +13,9 @@ var MessageView = {
       </div>
       -->
     `)
+  //add actual username and text
+  //
+  // /inside div<%= username %><%= text %>
 
 };
 

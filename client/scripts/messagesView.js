@@ -16,10 +16,11 @@ var MessagesView = {
     //get /userlist
     $.ajax({
       url: Parse.server,
-      type: 'POST',
+      type: 'GET',
       data: JSON.stringify(message),
       contentType: 'application/json',
       success: function (data) {
+        $('#chats').append(JSON.stringify(message));
         console.log('chatterbox: Message sent');
       },
       error: function (data) {
@@ -31,7 +32,7 @@ var MessagesView = {
 
   renderMessage: function(message) {
     // TODO: Render a single message.
-    //get /userlist/:userid
+    //message
   },
 
   handleClick: function(event) {
