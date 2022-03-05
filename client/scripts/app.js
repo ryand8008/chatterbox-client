@@ -19,22 +19,35 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
-    App.fetch(MessagesView.render());
+    // App.fetch(MessagesView.render());
 
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.
 
     // setInterval to fetch every few seconds?
+
+    // setInterval(App.fetch(), 2000);
+
   },
 
   fetch: function(callback = ()=>{}) {
-    Parse.readAll((data) => {
+    Parse.readAll((data = []) => {
       // examine the response from the server request:
-      //update messages
-      MessageView.render();
+      // update messages
+      // Parse.create(message);
+      // Messages.addAllStuff(data);
+      MessagesView.render(data);
+      RoomsView.render();
       //update rooms
-      console.log(data);
+      // console.log(data[0].username);
+      // console.log(data);
+      console.log(Messages);
+      // var $div = $('<div></div>').text('Messages._data');
+      // $div.appendTo($('#chats'));
 
+
+
+      // console.log(Messages.data);
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
 

@@ -8,36 +8,35 @@ var MessagesView = {
   initialize: function() {
     // TODO: Perform any work which needs to be done
     // when this view loads.
-    //put/patch: for update?
+    // MessagesView.render();
+
   },
-  // ($'#chats').append$(MessagesView.renderMessage)
-  render: function() {
+
+  render: function(stuff) {
     // TODO: Render _all_ the messages.
-    //get /userlist
-    $.ajax({
-      url: Parse.server,
-      type: 'GET',
-      data: JSON.stringify(message),
-      contentType: 'application/json',
-      success: function (data) {
-        $('#chats').append(JSON.stringify(message));
-        console.log('chatterbox: Message sent');
-      },
-      error: function (data) {
-        // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
-        console.error('chatterbox: Failed to send message', data);
-      }
-    });
+    // console.log($('chats').get());
+    console.log('TESTING', stuff);
+    for (var x = 0; x < stuff.length; x++) {
+
+      MessagesView.$chats.append(stuff[x].text);
+    }
+    // stuff.username
+
+
   },
 
   renderMessage: function(message) {
     // TODO: Render a single message.
     //message
+    $('#chats').append(message);
+    console.log(message);
   },
 
   handleClick: function(event) {
     // TODO: handle a user clicking on a message
     // (this should add the sender to the user's friend list).
+
+
     //get userlist/:userid/followers maybe
   }
 

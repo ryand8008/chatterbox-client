@@ -11,24 +11,19 @@ var Messages = {
   //data is array of objects
   //keys text, username, roomname
 
-  // _data: {'username': 'something',
+  _data: {},
 
-  //         }
+  addAllStuff: function(arr) {
 
-  //get method? sortBy created at
-  //_.chain?? takes in an object
-
-  //update method?
-
-  //iterate over messages, grabbing info
-
-  //use escaping for XSS (sanitize?)
+    // console.log(message, 'this is message');
+    // Messages._data[messageID] = message;
 
 
-  //retrieve: get
-  //add to: put/patch or post
-
+  }
 };
+
+
+
 
 //example:
 //var message = {
@@ -36,7 +31,3 @@ var Messages = {
 //   text: 'trololo',
 //   roomname: '4chan'
 // };
-
-//information from parse
-//example:
-//parse.data.name
